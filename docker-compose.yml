@@ -1,0 +1,10 @@
+services:
+  floodgate-app:
+    build: .
+    image: floodgate:latest
+    container_name: floodgate-app
+    ports:
+      - "5174:80"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
